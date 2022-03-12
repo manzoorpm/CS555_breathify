@@ -4,6 +4,6 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import *
 
-def home(request):
+def signin(request):
 	
-	return render(request, 'appone/registration.html')
+	return render(request, 'appone/sign_in.html')
