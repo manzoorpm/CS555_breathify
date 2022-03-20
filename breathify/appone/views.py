@@ -50,3 +50,8 @@ def registration(request):
 def home(request):
 	context = {}
 	return render(request, 'appone/home.html')
+
+@login_required(login_url='signin')
+def levelone(request):
+	context = {}
+	return render(request, 'appone/levelone.html')
