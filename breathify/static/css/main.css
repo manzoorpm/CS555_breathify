@@ -277,10 +277,181 @@
   font-weight: 400;
 }
 
-/* here */
+.section-levels {
 
+  display: -webkit-box;
 
-/*  here */
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  width: 100vw;
+
+  height: 100vh;
+
+  padding-top: 0px;
+
+  padding-bottom: 0px;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: normal;
+
+  -webkit-flex-direction: column;
+
+  -ms-flex-direction: column;
+
+  flex-direction: column;
+
+  -webkit-box-pack: start;
+
+  -webkit-justify-content: flex-start;
+
+  -ms-flex-pack: start;
+
+  justify-content: flex-start;
+
+  -webkit-box-align: center;
+
+  -webkit-align-items: center;
+
+  -ms-flex-align: center;
+
+  align-items: center;
+
+  background-color: #341e3a;
+
+  background-image: url('/static/images/5330558.jpg');
+
+  background-position: 0px 0px;
+
+  background-size: cover;
+
+}
+
+ 
+
+.navbar-levels {
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  width: 100%;
+
+  height: 10%;
+
+  padding: 28px 25px;
+
+  -webkit-box-pack: justify;
+
+  -webkit-justify-content: space-between;
+
+  -ms-flex-pack: justify;
+
+  justify-content: space-between;
+
+  border-radius: 0px;
+
+  background-color: #2f725d;
+
+}
+
+ 
+
+.levels-list-container {
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  height: 90%;
+
+  max-width: 3000px;
+
+  padding-top: 0px;
+
+  padding-bottom: 0px;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: normal;
+
+  -webkit-flex-direction: column;
+
+  -ms-flex-direction: column;
+
+  flex-direction: column;
+
+  -webkit-box-pack: center;
+
+  -webkit-justify-content: center;
+
+  -ms-flex-pack: center;
+
+  justify-content: center;
+
+}
+
+ 
+
+.levels-head-text {
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  height: 10%;
+
+  margin-bottom: 5%;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: normal;
+
+  -webkit-flex-direction: column;
+
+  -ms-flex-direction: column;
+
+  flex-direction: column;
+
+  -webkit-box-pack: center;
+
+  -webkit-justify-content: center;
+
+  -ms-flex-pack: center;
+
+  justify-content: center;
+
+}
+
+ 
+
+.heading-2 {
+
+  font-family: Lato, sans-serif;
+
+  color: #0f490a;
+
+  font-weight: 400;
+
+  text-align: center;
+
+}
 .messagebox{
   color:blanchedalmond;
   margin-top:10px;
