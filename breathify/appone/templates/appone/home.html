@@ -1,13 +1,39 @@
-{% load static %}
-<html>
-<head>
-<meta charset="utf-8">
-<title>Breathify - Levels</title>
-<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
-<script src="{% static '/js/main.js' %}"></script>
-</head>
-<!-- Start-->
+<body>
 
-<!-- End-->
-</html>
+    <div class="section-levels wf-section">
+
+    <div class="navbar-levels">
+
+        <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222" sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw"  alt="" class="logo-login"></div>
+
+        <div class="nav-my-account">
+
+        <div class="nav-right-text">
+
+            <h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>
+
+            </h4>
+
+        </div>
+
+        <div class="my-account-icon"><img src="{% static 'images/abstract-user-flat-1.svg' %} " loading="lazy" width="49" alt=""></div>
+
+        </div>
+
+    </div>
+
+    <div class="levels-list-container w-container">
+
+        <div class="levels-head-text">
+
+        <h1 class="heading-2">Start your breathing meditation today!</h1>
+
+        </div>
+
+       
+
+    </div>
+
+    </div>
+
+</body>
