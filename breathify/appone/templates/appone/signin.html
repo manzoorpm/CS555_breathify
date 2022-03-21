@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Breathify - Log in</title>
@@ -9,20 +10,25 @@
   <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
   <script src="{% static '/js/main.js' %}"></script>
- 
+
 </head>
+
 <body>
-  <div class="section wf-section" >
+  <div class="section wf-section">
     <div class="login-box">
-      <div class="form-block-login w-form"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222" sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw"  alt="" class="logo-login">
-        <form id="email-form" name="email-form" method="post" action ="" class="form-2">
+      <div class="form-block-login w-form"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222"
+          sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt="" class="logo-login">
+        <form id="email-form" name="email-form" method="post" action="" class="form-2">
           {% csrf_token %}
-          <input type="text" class="login-field w-input" maxlength="256" name="username" data-name="username" placeholder="Username" id="username" required="">
-          <input type="password" class="login-field w-input" maxlength="256" name="password" data-name="password" placeholder="Password" id="password" required="">
-          <input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
-       
+          <input type="text" class="login-field w-input" maxlength="256" name="username" data-name="username"
+            placeholder="Username" id="username" required="">
+          <input type="password" class="login-field w-input" maxlength="256" name="password" data-name="password"
+            placeholder="Password" id="password" required="">
+          <input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button">
+        </form>
+
         {% for message in messages %}
-          <div class="messagebox">{{message}}</div>
+        <div class="messagebox">{{message}}</div>
         {% endfor %}
         <div class="registrationlink">Don't have an account? <a href="{% url 'registration' %}" class="ml-2">Sign Up</a>
         </div>
@@ -31,4 +37,5 @@
     </div>
   </div>
 </body>
+
 </html>
