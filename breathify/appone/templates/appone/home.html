@@ -1,93 +1,94 @@
 {% load static %}
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Breathify - Levels</title>
-	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
-	<script src="{% static '/js/main.js' %}"></script>
+    <meta charset="utf-8">
+    <title>Breathify - Levels</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
+    <script src="{% static '/js/main.js' %}"></script>
 </head>
+
 <body>
-	<div class="section-levels wf-section">
-		<div class="navbar-levels">
-			<div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222"
-					sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt="" class="logo-login"></div>
-			<div class="nav-my-account">
-				<div class="nav-right-text">
-					<h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>
-					</h4>
-				</div>
-				<div class="my-account-icon"><img src="{% static 'images/abstract-user-flat-1.svg' %} " loading="lazy"
-						width="49" alt=""></div>
-			</div>
-		</div>
-		<div class="levels-list-container w-container">
-			<div class="levels-head-text">
-				<h1 class="heading-2">Start your breathing meditation today!</h1>
-			</div>
-			<div class="levels-row">
-				<a href="{% url 'levelone' %}" class="level-item-a w-inline-block">
-					<div class="level-item-80">
-						<div class="div-block-4">
-							<h1 class="day-text">Day One</h1>
-						</div>
-					</div>
-					<div class="level-item-20">
-						<h1 class="theme-text">The Beach</h1>
-					</div>
-				</a>
-				<a href="#" class="level-item-b w-inline-block">
-					<div class="level-item-80">
-						<div class="div-block-4">
-							<h1 class="day-text">Day Two</h1>
-						</div>
-					</div>
-					<div class="level-item-20">
-						<h1 class="theme-text">Blue Mountains</h1>
-					</div>
-				</a>
-				<a href="#" class="level-item-c w-inline-block">
-					<div class="level-item-80">
-						<div class="div-block-4">
-							<h1 class="day-text">Day Three</h1>
-						</div>
-					</div>
-					<div class="level-item-20">
-						<h1 class="theme-text">Mystic River</h1>
-					</div>
-				</a>
-			</div>
-			<div class="levels-row">
-				<a href="#" class="level-item-d w-inline-block">
-					<div class="level-item-80">
-						<div class="div-block-4">
-							<h1 class="day-text">Day Four</h1>
-						</div>
-					</div>
-					<div class="level-item-20">
-						<h1 class="theme-text">Dark Forest</h1>
-					</div>
-				</a>
-				<a href="#" class="level-item-f w-inline-block">
-					<div class="level-item-80">
-						<div class="div-block-4">
-							<h1 class="day-text">Day Five</h1>
-						</div>
-					</div>
-					<div class="level-item-20">
-						<h1 class="theme-text">Night Breeze</h1>
-					</div>
-				</a>
-				<a href="#" class="level-item-e w-inline-block">
-					<div class="level-item-80">
-						<div class="div-block-4">
-							<h1 class="day-text">Day Six</h1>
-						</div>
-					</div>
-					<div class="level-item-20">
-						<h1 class="theme-text">Cosmic Rain</h1>
-					</div>
-				</a>
-			</div>
+    <div class="section-levels wf-section">
+        <div class="navbar-levels">
+            <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222" sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt="" class="logo-login"></div>
+            <div class="nav-my-account">
+                <div class="nav-right-text">
+                    <h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>
+                    </h4>
+                </div>
+                <div class="my-account-icon"><img src="{% static 'images/abstract-user-flat-1.svg' %} " loading="lazy" width="49" alt=""></div>
+            </div>
+        </div>
+        <div class="levels-list-container w-container">
+            <div class="levels-head-text">
+                <h1 class="heading-2">Start your breathing meditation today!</h1>
+            </div>
+            <div class="levels-row">
+                <a href="{% url 'levelone' %}" class="level-item-a w-inline-block">
+                    <div class="level-item-80">
+                        <div class="div-block-4">
+                            <h1 class="day-text">Day One</h1>
+                        </div>
+                    </div>
+                    <div class="level-item-20">
+                        <h1 class="theme-text">The Beach</h1>
+                    </div>
+                </a>
+                <a href="{% url 'leveltwo' %}" class="level-item-b w-inline-block">
+                    <div class="level-item-80">
+                        <div class="div-block-4">
+                            <h1 class="day-text">Day Two</h1>
+                        </div>
+                    </div>
+                    <div class="level-item-20">
+                        <h1 class="theme-text">Blue Mountains</h1>
+                    </div>
+                </a>
+                <a href="{% url 'levelthree' %}" class="level-item-c w-inline-block">
+                    <div class="level-item-80">
+                        <div class="div-block-4">
+                            <h1 class="day-text">Day Three</h1>
+                        </div>
+                    </div>
+                    <div class="level-item-20">
+                        <h1 class="theme-text">Mystic River</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="levels-row">
+                <a href="{% url 'levelfour' %}" class="level-item-d w-inline-block">
+                    <div class="level-item-80">
+                        <div class="div-block-4">
+                            <h1 class="day-text">Day Four</h1>
+                        </div>
+                    </div>
+                    <div class="level-item-20">
+                        <h1 class="theme-text">Dark Forest</h1>
+                    </div>
+                </a>
+                <a href="#" class="level-item-f w-inline-block">
+                    <div class="level-item-80">
+                        <div class="div-block-4">
+                            <h1 class="day-text">Day Five</h1>
+                        </div>
+                    </div>
+                    <div class="level-item-20">
+                        <h1 class="theme-text">Night Breeze</h1>
+                    </div>
+                </a>
+                <a href="#" class="level-item-e w-inline-block">
+                    <div class="level-item-80">
+                        <div class="div-block-4">
+                            <h1 class="day-text">Day Six</h1>
+                        </div>
+                    </div>
+                    <div class="level-item-20">
+                        <h1 class="theme-text">Cosmic Rain</h1>
+                    </div>
+                </a>
+            </div>
 </body>
+
 </html>

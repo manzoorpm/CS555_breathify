@@ -55,3 +55,18 @@ def home(request):
 def levelone(request):
 	context = {}
 	return render(request, 'appone/levelone.html')
+
+@login_required(login_url='signin') #redirect to login if not 
+def leveltwo(request):
+	context = {}
+	return render(request, 'appone/leveltwo.html')
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelthree(request):
+	context = {}
+	return render(request, 'appone/levelthree.html')
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelfour(request):
+	context = {}
+	return render(request, 'appone/levelfour.html')
