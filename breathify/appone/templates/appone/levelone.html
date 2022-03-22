@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Beach-Level 1</title>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
+  <script src="{% static '/js/main.js' %}"></script>
+</head>
+<body>
+  <div class="section-home wf-section">
+    <div class="navbar-main">
+      <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="157" sizes="(max-width: 479px) 36vw, 157px" srcset="images/logo_breathify-1-p-500.png 500w, images/logo_breathify-1-p-800.png 800w, images/logo_breathify-1-p-1080.png 1080w, images/logo_breathify-1-p-1600.png 1600w, images/logo_breathify-1.png 1649w" alt=""></div>
+      <div class="nav-my-account">
+        <div class="nav-right-text">
+			<h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>
+        </div>
+        <div class="my-account-icon"><img src="{% static 'images/abstract-user-flat-1.svg' %}" loading="lazy" width="49" alt=""></div>
+      </div>
+    </div>
+    <div class="container-mainpage">
+      <div class="main-page-left">
+        <div class="main-level-box">
+          <h1 class="level-head">Level 1</h1>
+          <div class="level-sub-head-1">The Beach</div>
+        </div>
+        <div class="steps-box">
+          <h1 class="heading-steps">Steps</h1>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Hold 3 sec</div>
+          <div class="task">Exhale through mouth</div>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Hold 5 sec</div>
+          <div class="task">Exhale through mouth</div>
+          <div class="task">Inhale through nose</div>
+        </div>
+      </div>
+      <div class="main-stage"></div>
+      <div class="main-page-right">
+        <div class="main-level-box">
+          <div class="level-sub-scores">SCORES</div>
+          <h1 class="level-score">000</h1>
+        </div>
+        <div class="benefits-box">
+          <h1 class="heading-steps">Benefits</h1>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Inhale through nose</div>
+          <div class="task">Inhale through nose</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+(^^place this in the CS555_breathify/breathify/appone/templates/appone/home.html)
+
+
+.container-mainpage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: 90%;
+  padding-top: 2%;
+  padding-bottom: 8%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.main-page-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-right: 25px;
+  padding-left: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.main-level-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  margin-bottom: 0%;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(83, 35, 35, 0.67);
+}
+.level-head {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  font-weight: 200;
+}
+.level-sub-head-1 {
+  margin-bottom: 15px;
+  font-family: Montserrat, sans-serif;
+  color: #ffcfcf;
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+}
+.steps-box {
+  height: 50%;
+  border-radius: 20px;
+  background-color: rgba(194, 77, 77, 0.67);
+}
+.heading-steps {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  font-weight: 600;
+}
+.main-stage {
+  width: 100%;
+}
+.main-page-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.main-level-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20%;
+  margin-bottom: 0%;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(83, 35, 35, 0.67);
+}
+.level-sub-scores {
+  margin-bottom: 0px;
+  font-family: Montserrat, sans-serif;
+  color: #ffcfcf;
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+}
+.level-score {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  font-weight: 200;
+}
+.benefits-box {
+  height: 50%;
+  border-radius: 20px;
+  background-color: rgba(194, 77, 77, 0.67);
+}
+.heading-steps {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+  color: #fff;
+  font-weight: 600;
+}
+
+  }
