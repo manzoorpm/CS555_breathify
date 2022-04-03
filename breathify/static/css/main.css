@@ -1,3 +1,9 @@
+a:link { 
+    color: #fff;
+  }
+a:visited { 
+    color: #fff;
+  }
 .section {
     display: -webkit-box;
     display: -webkit-flex;
@@ -162,9 +168,17 @@
 
 .submit-button {
     width: 100%;
-    border-radius: 20px;
-    background-color: #c262a3;
-    font-weight: 700;
+    border-collapse: collapse;
+    font-weight: 300;
+    display: inline-block;
+    padding: 9px 25px;
+    background-color: #a54580;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    -webkit-appearance: none;
+    cursor: pointer;
 }
 
 .login-field {
@@ -177,6 +191,7 @@
     -ms-flex-item-align: auto;
     -ms-grid-row-align: auto;
     align-self: auto;
+    margin-bottom: 20px;
 }
 
 .container-3 {
@@ -227,7 +242,8 @@
     display: flex;
     width: 100%;
     height: 10%;
-    padding: 28px 25px;
+    min-height: 120px;
+    padding: 25px 25px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -267,6 +283,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .heading {
@@ -309,6 +326,7 @@
     display: flex;
     width: 100%;
     height: 10%;
+    min-height: 120px;
     padding: 28px 25px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -557,7 +575,7 @@
     border-color: #351f3d;
     border-radius: 20px;
     background-color: rgba(68, 45, 68, 0.85);
-    background-image: url('/static/images/6206160.jpg');
+    background-image: url('/static/images/4.jpg');
     background-position: 0% 100%;
     background-size: cover;
     text-decoration: none;
@@ -857,6 +875,7 @@
 
 .messagebox {
     color: blanchedalmond;
+    font-weight: 500;
     margin-top: 10px;
 }
 

@@ -13,8 +13,9 @@
 <body>
     <div class="section-home wf-section" style="background-image: url('/static/images/1775.jpg'); ">
         <div class="navbar-main" style="background-color: #b92f2a;">
-            <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222"
-                    sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt="" class="logo-login"></div>
+            <a href="{% url 'home' %}">
+                <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222" alt=""></div>
+            </a>
             <div class="nav-my-account">
                 <div class="nav-right-text">
                     <h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>

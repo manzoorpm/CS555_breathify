@@ -21,15 +21,17 @@
         <form id="email-form" name="email-form" method="post" action="" class="form-2">
           {% csrf_token %}
           <div>{{form.username}}</div>
+          <div>{{form.first_name}}</div>
+          <div>{{form.last_name}}</div>
           <div>{{form.email}}</div>
           <div>{{form.password1}}</div>
           <div>{{form.password2}}</div>
-          <input type="submit" value="Submit" name="Create User" class="submit-button w-button">
+          <input type="submit" value="Submit" name="Create User" class="submit-button">
         </form>
         {% for message in messages %}
         <div class="messagebox">{{message}}</div>
         {% endfor %}
-        <div class="registrationlink">Don't have an account? <a href="{% url 'registration' %}" class="ml-2">Sign Up</a>
+        <div class="registrationlink">Don't have an account? <a href="{% url 'signin' %}" class="ml-2">Sign In</a>
         </div>
 
       </div>
