@@ -18,3 +18,8 @@ To Run the application:
 4 . Run the server using the code: python manage.py runserver (Make sure the file manage.py is in the current directory)
 
 Go to the Ip address mentined in the terminal to view the web application
+
+
+Test:
+
+- Django: breathify/appone/tests/
