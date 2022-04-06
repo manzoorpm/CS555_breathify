@@ -5,6 +5,8 @@ from .forms import userform
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.db import models
+from django.conf import settings
 
 
 def signin(request):
@@ -70,3 +72,17 @@ def levelthree(request):
 def levelfour(request):
 	context = {}
 	return render(request, 'appone/levelfour.html')
+
+def update_user(request, pk):
+
+	user = settings.objects.get(id=pk)
+	form = userForm(instance=user)
+
+	if request.method == 'POST':
+		form = userForm(request.POST, instance=user)
+		if form.is_valid():
+			form.save()
+			return redirect('/')
+
+	context = {'form':form}
+	return render(request, 'accounts/user_profile.html', context)
