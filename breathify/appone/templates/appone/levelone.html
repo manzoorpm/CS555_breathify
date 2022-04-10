@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
     <script src="{% static '/js/main.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+
 </head>
 
 <body>
@@ -126,8 +128,26 @@
                             </g>
                     </svg>
                 </div>
-                <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
-                <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+                <div class="start-stop">
+                    <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
+                    <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+                </div>
+                <div class="music-box" id="music-box">
+                    <audio src="{% static 'music/music2.mp3' %}" id="audio"></audio>
+                    <div class="music-control">
+                        <button id="prev" class="action-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button id="play" class="action-btn action-btn-big">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="next" class="action-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
             <div class="main-page-right">
                 <div class="main-level-box">
@@ -141,9 +161,12 @@
                     <div class="task">Improved Concentration</div>
                     <div class="task">Improved Cognition</div>
                 </div>
+
+
             </div>
         </div>
     </div>
+    <script src="{% static '/js/music.js' %}"></script>
 </body>
 
 </html>
