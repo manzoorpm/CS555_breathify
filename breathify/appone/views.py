@@ -73,6 +73,11 @@ def levelfour(request):
 	context = {}
 	return render(request, 'appone/levelfour.html')
 
+@login_required(login_url='signin') #redirect to login if not 
+def profile(request):
+	context = {}
+	return render(request, 'appone/profile.html')
+
 def update_user(request, pk):
 
 	user = settings.objects.get(id=pk)

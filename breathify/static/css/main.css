@@ -1,9 +1,11 @@
-a:link { 
+a:link {
     color: #fff;
-  }
-a:visited { 
+}
+
+a:visited {
     color: #fff;
-  }
+}
+
 .section {
     display: -webkit-box;
     display: -webkit-flex;
@@ -810,7 +812,7 @@ a:visited {
     display: -ms-flexbox;
     display: flex;
     height: 20%;
-    min-height: 200px ;
+    min-height: 200px;
     margin-bottom: 50px;
     padding: 20px;
     -webkit-box-orient: vertical;
@@ -881,7 +883,7 @@ a:visited {
 .breatheRed {
     width: 500px;
     margin-top: 5%;
-    fill:  #af4c4c;
+    fill: #af4c4c;
     position: absolute;
     z-index: 20;
 }
@@ -912,6 +914,7 @@ a:visited {
     color: beige;
     margin-top: 10px;
 }
+
 .StartButton {
     background-color: #4CAF50;
     border: none;
@@ -923,8 +926,9 @@ a:visited {
     font-size: 16px;
     border-radius: 25px;
 }
-  .StopButton {
-    background-color: #af4c4c; 
+
+.StopButton {
+    background-color: #af4c4c;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -934,47 +938,277 @@ a:visited {
     font-size: 16px;
     border-radius: 25px;
 
-  }
-  .task {
+}
+
+.task {
     margin-bottom: 10px;
     font-family: Montserrat, sans-serif;
     color: #e4dcdc;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
-  }
-  
-  /* Music Player Styles */
+}
+
+/* Music Player Styles */
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .music-box {
-  border-radius: 15px;
-  display: flex;
-  padding: 20px 30px;
-  position: relative;
-  margin: 100px 0;
-  z-index: 10;
-  margin-top: 600px;
+    border-radius: 15px;
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+    margin-top: 600px;
 }
 
 .music-control {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 }
 
 .action-btn {
-  background-color: rgba(0,0,0,0);
-  border: 0;
-  color: #dfdbdf;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
-  margin: 0 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
 }
 
 .action-btn.action-btn-big {
-  color: #cdc2d0;
-  font-size: 30px;
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+
+/* activity box */
+
+.activity-main-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: hsla(0, 0%, 100%, 0.9);
+}
+
+.activity-header {
+    width: 100%;
+    height: 250px;
+}
+
+.activity-profile-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-left: 50px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.profile-image {
+    border-radius: 100px;
+}
+
+.profile-name {
+    padding-left: 0px;
+    font-family: Montserrat, sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+
+.name-box {
+    padding-left: 28px;
+}
+
+.player-level {
+    color: rgba(146, 240, 150, 0.9);
+    font-size: 22px;
+}
+
+.activity-more-info-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 51px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    border-top: 1px solid #a3a3a3;
+}
+
+.email-text {
+    color: hsla(0, 0%, 100%, 0.9);
+}
+
+.email-box {
+    padding-left: 10px;
+}
+
+.dob-box {
+    padding-left: 27px;
+}
+
+
+.activity-inner-box {
+    display: block;
+    width: 100%;
+    padding: 0px 25px 0px 55px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.activity-head {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: hsla(0, 0%, 88%, 0.9);
+}
+
+.activity-head-points {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 21px;
+    padding-top: 20px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.point-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    height: 50px;
+    margin-left: 17px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #3f964f;
+    color: rgba(20, 10, 10, 0.9);
+}
+
+.point-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.point {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: hsla(0, 0%, 100%, 0.9);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.div-block-26 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.no-box {
+    width: 80px;
+}
+
+.activity-name-box {
+    width: 300px;
+}
+
+.points-earned-box {
+    width: 200px;
+}
+
+.list-head-text {
+    color: #8eca8c;
+    font-weight: 700;
+}
+
+
+.no-text {
+    color: hsla(0, 0%, 100%, 0.9);
+}
+
+.actvity-name-text {
+    color: hsla(0, 0%, 100%, 0.9);
+    font-weight: 400;
+}
+
+.points-earned-text {
+    color: hsla(0, 0%, 100%, 0.9);
+    font-weight: 400;
+}
+
+.list-head-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
 }
