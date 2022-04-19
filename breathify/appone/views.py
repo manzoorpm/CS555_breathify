@@ -75,8 +75,19 @@ def levelfour(request):
 
 @login_required(login_url='signin') #redirect to login if not 
 def profile(request):
-	context = {}
-	return render(request, 'appone/profile.html')
+	username = request.user
+	emailId = username.email
+	firstName = username.first_name
+	lastName = username.last_name
+
+
+	context = {
+		'user': username,
+		'email': emailId,
+		'first':firstName,
+		'last':lastName
+	}
+	return render(request, 'appone/profile.html', context)
 
 def update_user(request, pk):
 
