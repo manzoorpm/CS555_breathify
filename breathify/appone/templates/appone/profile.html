@@ -3,11 +3,24 @@
 
 <head>
     <meta charset="utf-8">
+    <meta property="og:url" content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="Your description" />
+    <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
     <title>Dark Forest - Level 4</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
     <script src="{% static '/js/main.js' %}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
 </head>
 
 <body>
@@ -27,9 +40,8 @@
         <div class="container-mainpage">
             <div class="activity-main-box">
                 <div class="activity-header">
-                    <div class="activity-profile-box"><img
-                            src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg"
-                            loading="lazy" alt="" class="profile-image">
+                    <div class="activity-profile-box"><img src="{% static 'images/user.png' %}" loading="lazy"
+                            height="120px" alt="" class="profile-image">
                         <div class="name-box">
                             <h1 class="profile-name">{{user}}</h1>
                             <div class="player-level">Beginner</div>
@@ -42,6 +54,7 @@
                         <div class="dob-box">
                             <div class="email-text">{{first}} {{last}}</div>
                         </div>
+
                     </div>
                 </div>
                 <div class="activity-inner-box">
@@ -50,6 +63,9 @@
                         <div class="point-box">
                             <div class="point-text">Total Points</div>
                             <div class="point">100034</div>
+                        </div>
+                        <div class="fb-share-button" style="margin-left: 20px;"
+                            data-href="https://www.your-domain.com/your-page.html" data-layout="button_count">
                         </div>
                     </div>
                     <div class="list-head-box">
