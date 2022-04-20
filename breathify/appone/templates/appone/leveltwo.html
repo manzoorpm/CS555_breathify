@@ -12,45 +12,36 @@
 
 <body>
     <div class="section-home wf-section" style="background-image: url('/static/images/2774583.jpg');">
-        <div class="navbar-main" style="background-color: #4c5f7f;">
-            <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222"
-                    sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt="" class="logo-login"></div>
-            <div class="nav-my-account">
-                <div class="nav-right-text">
-                    <h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>
-                </div>
-                <div class="my-account-icon"><img src="{% static 'images/abstract-user-flat-1.svg' %}" loading="lazy"
-                        width="49" alt=""></div>
+        {% include 'appone/navbar.html' %}
+    </div>
+    <div class="container-mainpage">
+        <div class="main-page-left">
+            <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
+                <h1 class="level-head">Level 1</h1>
+                <div class="level-sub-head-1">The Beach</div>
+            </div>
+            <div class="steps-box" style="background-color: rgba(103, 129, 177, 0.67);">
+                <h1 class="heading-steps">Steps</h1>
+                <div class="task" id="1">Inhale for 3 sec</div>
+                <div class="task" id="2">Hold for 1 sec</div>
+                <div class="task" id="3">Exhale in 2 sec</div>
+                <div class="task" id="4">Inhale for 4 sec</div>
+                <div class="task" id="5">Hold for 2 sec</div>
+                <div class="task" id="6">Exhale in 3 sec</div>
+                <div class="task" id="7">Inhale for 3 sec</div>
+                <div class="task" id="8">Hold for 2 sec</div>
+                <div class="task" id="9">Exhale in 4 sec</div>
             </div>
         </div>
-        <div class="container-mainpage">
-            <div class="main-page-left">
-                <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
-                    <h1 class="level-head">Level 1</h1>
-                    <div class="level-sub-head-1">The Beach</div>
-                </div>
-                <div class="steps-box" style="background-color: rgba(103, 129, 177, 0.67);">
-                    <h1 class="heading-steps">Steps</h1>
-                    <div class="task" id="1">Inhale for 3 sec</div>
-                    <div class="task" id="2">Hold for 1 sec</div>
-                    <div class="task" id="3">Exhale in 2 sec</div>
-                    <div class="task" id="4">Inhale for 4 sec</div>
-                    <div class="task" id="5">Hold for 2 sec</div>
-                    <div class="task" id="6">Exhale in 3 sec</div>
-                    <div class="task" id="7">Inhale for 3 sec</div>
-                    <div class="task" id="8">Hold for 2 sec</div>
-                    <div class="task" id="9">Exhale in 4 sec</div>
-                </div>
-            </div>
-            <div class="main-stage">
-                <div class="breatheRed">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.326 206.326"
-                        style="enable-background:new 0 0 206.326 206.326;" xml:space="preserve">
+        <div class="main-stage">
+            <div class="breatheRed">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.326 206.326"
+                    style="enable-background:new 0 0 206.326 206.326;" xml:space="preserve">
+                    <g>
                         <g>
-                            <g>
-                                <path
-                                    d="M104.265,117.959c-0.304,3.58,2.126,22.529,3.38,29.959c0.597,3.52,2.234,9.255,1.645,12.3
+                            <path
+                                d="M104.265,117.959c-0.304,3.58,2.126,22.529,3.38,29.959c0.597,3.52,2.234,9.255,1.645,12.3
                   c-0.841,4.244-1.084,9.736-0.621,12.934c0.292,1.942,1.211,10.899-0.104,14.175c-0.688,1.718-1.949,10.522-1.949,10.522
                   c-3.285,8.294-1.431,7.886-1.431,7.886c1.017,1.248,2.759,0.098,2.759,0.098c1.327,0.846,2.246-0.201,2.246-0.201
                   c1.139,0.943,2.467-0.116,2.467-0.116c1.431,0.743,2.758-0.627,2.758-0.627c0.822,0.414,1.023-0.109,1.023-0.109
@@ -81,17 +72,17 @@
                   c0,0,0.91,1.047,2.237,0.201c0,0,1.742,1.175,2.777-0.098c0,0,1.839,0.408-1.435-7.886c0,0-1.254-8.793-1.945-10.522
                   c-1.318-3.275-0.387-12.251-0.106-14.175c0.453-3.216,0.21-8.695-0.618-12.934c-0.606-3.038,1.035-8.774,1.641-12.3
                   c1.245-7.423,3.685-26.373,3.38-29.959l1.008,0.354C103.809,118.312,104.265,117.959,104.265,117.959z" />
-                            </g>
-                    </svg>
-                </div>
-                <div class="breatheGreen">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.326 206.326"
-                        style="enable-background:new 0 0 206.326 206.326;" xml:space="preserve">
+                        </g>
+                </svg>
+            </div>
+            <div class="breatheGreen">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 206.326 206.326"
+                    style="enable-background:new 0 0 206.326 206.326;" xml:space="preserve">
+                    <g>
                         <g>
-                            <g>
-                                <path
-                                    d="M104.265,117.959c-0.304,3.58,2.126,22.529,3.38,29.959c0.597,3.52,2.234,9.255,1.645,12.3
+                            <path
+                                d="M104.265,117.959c-0.304,3.58,2.126,22.529,3.38,29.959c0.597,3.52,2.234,9.255,1.645,12.3
                   c-0.841,4.244-1.084,9.736-0.621,12.934c0.292,1.942,1.211,10.899-0.104,14.175c-0.688,1.718-1.949,10.522-1.949,10.522
                   c-3.285,8.294-1.431,7.886-1.431,7.886c1.017,1.248,2.759,0.098,2.759,0.098c1.327,0.846,2.246-0.201,2.246-0.201
                   c1.139,0.943,2.467-0.116,2.467-0.116c1.431,0.743,2.758-0.627,2.758-0.627c0.822,0.414,1.023-0.109,1.023-0.109
@@ -122,26 +113,26 @@
                   c0,0,0.91,1.047,2.237,0.201c0,0,1.742,1.175,2.777-0.098c0,0,1.839,0.408-1.435-7.886c0,0-1.254-8.793-1.945-10.522
                   c-1.318-3.275-0.387-12.251-0.106-14.175c0.453-3.216,0.21-8.695-0.618-12.934c-0.606-3.038,1.035-8.774,1.641-12.3
                   c1.245-7.423,3.685-26.373,3.38-29.959l1.008,0.354C103.809,118.312,104.265,117.959,104.265,117.959z" />
-                            </g>
-                    </svg>
-                </div>
-                <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
-                <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+                        </g>
+                </svg>
             </div>
-            <div class="main-page-right">
-                <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
-                    <div class="level-sub-scores">SCORES</div>
-                    <h1 class="level-score">000</h1>
-                </div>
-                <div class="benefits-box" style="background-color: rgba(103, 129, 177, 0.67);">
-                    <h1 class="heading-steps">Benefits</h1>
-                    <div class="task">Reduce Stress</div>
-                    <div class="task">Reduce Anxiety</div>
-                    <div class="task">Improved Concentration</div>
-                    <div class="task">Improved Cognition</div>
-                </div>
+            <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
+            <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+        </div>
+        <div class="main-page-right">
+            <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
+                <div class="level-sub-scores">SCORES</div>
+                <h1 class="level-score">000</h1>
+            </div>
+            <div class="benefits-box" style="background-color: rgba(103, 129, 177, 0.67);">
+                <h1 class="heading-steps">Benefits</h1>
+                <div class="task">Reduce Stress</div>
+                <div class="task">Reduce Anxiety</div>
+                <div class="task">Improved Concentration</div>
+                <div class="task">Improved Cognition</div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 

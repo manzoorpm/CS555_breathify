@@ -11,19 +11,7 @@
 
 <body>
     <div class="section-levels wf-section">
-        <div class="navbar-levels">
-            <a href="{% url 'home' %}">
-                <div class="logo"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222" alt=""></div>
-            </a>
-            <div class="nav-my-account">
-                <div class="nav-right-text">
-                    <h4 class="heading">Hello, {{request.user}} <a href="{% url 'signout' %}">Logout</a></p>
-                    </h4>
-                </div>
-                <div class="my-account-icon"><img src="{% static 'images/abstract-user-flat-1.svg' %} " loading="lazy"
-                        width="49" alt=""></div>
-            </div>
-        </div>
+        {% include 'appone/navbar.html' %}
         <div class="levels-list-container w-container">
             <div class="levels-head-text">
                 <h1 class="heading-2">Start your breathing meditation today!</h1>
