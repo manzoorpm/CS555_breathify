@@ -14,16 +14,22 @@
 
 <body>
     <div class="section-home wf-section" style="background-image: url('/static/images/1775.jpg'); ">
+        <div class="score-box" id="score-box">
+            <div>Congrats! you have scored <span id="score">000</span></div>
+            <div><button id="levels" class="more-levels-button" onclick="saveScore()">MoreLevels</button></div>
+        </div>
         {% include 'appone/navbar.html' %}
         <div class="container-mainpage">
             <div class="main-page-left">
                 <div class="main-level-box" style="background-color: rgba(83, 35, 35, 0.67);">
-                    <h1 class="level-head">Level 1</h1>
-                    <div class="level-sub-head-1">The Beach</div>
+                    <h1 class="level-head" id="level" data-value="1">Level 1</h1>
+                    <div class="level-sub-head-1" id="levelName">The Beach</div>
                 </div>
                 <div class="steps-box" style="background-color: rgba(194, 77, 77, 0.67);">
-                    <h1 class="heading-steps">Steps</h1>
-                    <div class="task" id="1">Inhale for 3 sec</div>
+                    <div class="steps-head-box">
+                        <h1 class="heading-steps">Steps</h1>
+                    </div>
+                    <div class="task task-selected" id="1">Inhale for 3 sec</div>
                     <div class="task" id="2">Hold for 1 sec</div>
                     <div class="task" id="3">Exhale in 2 sec</div>
                     <div class="task" id="4">Inhale for 4 sec</div>
@@ -32,6 +38,11 @@
                     <div class="task" id="7">Inhale for 3 sec</div>
                     <div class="task" id="8">Hold for 2 sec</div>
                     <div class="task" id="9">Exhale in 4 sec</div>
+                    <div class="task" id="10">Hold for 2 sec</div>
+                    <div class="task" id="11">Exhale in 3 sec</div>
+                    <div class="task" id="12">Inhale for 3 sec</div>
+                    <div id="13"></div>
+
                 </div>
             </div>
             <div class="main-stage">
@@ -154,10 +165,12 @@
                         </i><br /><b>Mahatma
                             Gandhi</b></p>
                 </div>
-
-
             </div>
         </div>
+        <form id="postScore" name="postScore" method="post">
+            {% csrf_token %}
+            <div>{{form}}</div>
+        </form>
     </div>
     <script src="{% static '/js/music.js' %}"></script>
     <script src="{% static '/js/quote.js' %}"></script>

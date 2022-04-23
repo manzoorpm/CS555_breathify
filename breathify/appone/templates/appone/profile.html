@@ -52,7 +52,7 @@
                         <h1 class="activity-head">Activity</h1>
                         <div class="point-box">
                             <div class="point-text">Total Points</div>
-                            <div class="point">100034</div>
+                            <div class="point">{{totalPoints}}</div>
                         </div>
                         <div class="fb-share-button" style="margin-left: 20px;"
                             data-href="https://www.your-domain.com/your-page.html" data-layout="button_count">
@@ -69,17 +69,19 @@
                             <div class="list-head-text">Points Earned</div>
                         </div>
                     </div>
+                    {% for activity in activitys %}
                     <div class="div-block-26">
                         <div class="no-box">
                             <div class="no-text">1.</div>
                         </div>
                         <div class="activity-name-box">
-                            <div class="actvity-name-text">Beach</div>
+                            <div class="actvity-name-text">{{activity.game_level}}</div>
                         </div>
                         <div class="points-earned-box">
-                            <div class="points-earned-text">500</div>
+                            <div class="points-earned-text">{{activity.activity_points}}</div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

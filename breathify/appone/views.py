@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect 
 from django.http import HttpResponse
 from .models import *
-from .forms import userform
+from .forms import userform, scoreForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.db import models
 from django.conf import settings
+from django.db.models import Sum
 
 
 def signin(request):
@@ -36,7 +37,6 @@ def signout(request):
 def registration(request):
 	
 	form = userform()
-
 	if request.method == 'POST':
 		form = userform(request.POST)
 		if form.is_valid():
@@ -54,9 +54,20 @@ def home(request):
 	return render(request, 'appone/home.html')
 
 @login_required(login_url='signin') #redirect to login if not 
-def levelone(request):
+def relief(request):
 	context = {}
-	return render(request, 'appone/levelone.html')
+	return render(request, 'appone/relief_home.html')
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelone(request):
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	context = {'form': form}
+	return render(request, 'appone/levelone.html', context)
 
 @login_required(login_url='signin') #redirect to login if not 
 def leveltwo(request):
@@ -80,25 +91,16 @@ def profile(request):
 	firstName = username.first_name
 	lastName = username.last_name
 
+	activity_data = activity.objects.filter(user=username)
+	totalPoints = activity.objects.filter(user=username).aggregate(Sum('activity_points'))
+	totalPointSum = totalPoints['activity_points__sum']
 
 	context = {
 		'user': username,
 		'email': emailId,
 		'first':firstName,
-		'last':lastName
+		'last':lastName,
+		'activitys': activity_data,
+		'totalPoints': totalPointSum
 	}
 	return render(request, 'appone/profile.html', context)
-
-def update_user(request, pk):
-
-	user = settings.objects.get(id=pk)
-	form = userForm(instance=user)
-
-	if request.method == 'POST':
-		form = userForm(request.POST, instance=user)
-		if form.is_valid():
-			form.save()
-			return redirect('/')
-
-	context = {'form':form}
-	return render(request, 'accounts/user_profile.html', context)

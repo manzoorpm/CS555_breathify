@@ -1,9 +1,9 @@
-import email
 from tkinter import Widget
-from unicodedata import name
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
+from django.forms import ModelForm
+from appone.models import *
 
 
 class userform(UserCreationForm): #Form for user login
@@ -17,3 +17,14 @@ class userform(UserCreationForm): #Form for user login
 	class Meta:
 		model = User
 		fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+
+
+class scoreForm(ModelForm):
+
+	user = forms.CharField(widget=forms.HiddenInput(attrs={"name": "user" , "id": "user", "value": "default"}))
+	game_level = forms.CharField(widget=forms.HiddenInput(attrs={"name": "levelNameForm" , "id": "levelNameForm", "value": "default"}))
+	activity_points = forms.CharField(widget=forms.HiddenInput(attrs={"name": "latestScoreForm" , "id": "latestScoreForm", "value": "default"}))
+
+	class Meta:
+		model = activity
+		fields = ['user', 'game_level', 'activity_points']
