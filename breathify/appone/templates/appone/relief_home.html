@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Breathify - Levels</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
+    <script src="{% static '/js/main.js' %}"></script>
+</head>
+
+<body>
+    <div class="section-levels wf-section" style="background-image: url('/static/images/relief.jpg');
+    ">
+        {% include 'appone/navbar.html' %}
+        <div class="levels-list-container w-container">
+            <div class="levels-head-text">
+                <h1 class="heading-relief-page" style="color:rgb(179, 51, 51);">Start your breathing meditation today!
+                </h1>
+            </div>
+            <div class="levels-row">
+                <a href="{% url 'levelone' %}" class="level-item-a w-inline-block"
+                    style="background-image: url('/static/images/depressed.jpg');">
+                    <div class="level-item-80">
+                    </div>
+                    <div class="level-item-20" style="background-color: darksalmon;">
+                        <h1 class="theme-text" style="color: rgb(255, 243, 243);"><b>I'm Depressed</b></h1>
+                    </div>
+                </a>
+                <a href="{% url 'leveltwo' %}" class="level-item-b w-inline-block"
+                    style="background-image: url('/static/images/angry.jpg');">
+                    <div class="level-item-80">
+                    </div>
+                    <div class="level-item-20" style="background-color: darksalmon;">
+                        <h1 class="theme-text" style="color: rgb(255, 243, 243);"><b>I'm Angry</b></h1>
+                    </div>
+                </a>
+                <a href="{% url 'levelthree' %}" class="level-item-c w-inline-block"
+                    style="background-image: url('/static/images/stressed.jpg');">
+                    <div class="level-item-80">
+                    </div>
+                    <div class="level-item-20" style="background-color: darksalmon;">
+                        <h1 class="theme-text" style="color: rgb(255, 243, 243);"><b>I'm stressed</b></h1>
+                    </div>
+                </a>
+            </div>
+            <div class="levels-row">
+                <a href="{% url 'home' %}" style="text-decoration: none;">
+                    <div class="home-button" style="background-color: darksalmon; color: rgb(255, 243, 243);">
+                        Main levels
+                    </div>
+                </a>
+            </div>
+        </div>
+</body>
+
+</html>
