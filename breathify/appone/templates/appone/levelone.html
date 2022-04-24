@@ -15,8 +15,8 @@
 <body>
     <div class="section-home wf-section" style="background-image: url('/static/images/1775.jpg'); ">
         <div class="score-box" id="score-box">
-            <div>Congrats! you have scored <span id="score">000</span></div>
-            <div><button id="levels" class="more-levels-button" onclick="saveScore()">MoreLevels</button></div>
+            <div>Congrats! you have scored <span id="score">000</span> points</div>
+            <div><button id="levels" class="more-levels-button" onclick="saveScore()">More Levels</button></div>
         </div>
         {% include 'appone/navbar.html' %}
         <div class="container-mainpage">
@@ -27,20 +27,20 @@
                 </div>
                 <div class="steps-box" style="background-color: rgba(194, 77, 77, 0.67);">
                     <div class="steps-head-box">
-                        <h1 class="heading-steps">Steps</h1>
+                        <h2 class="heading-benefits">Steps</h2>
                     </div>
-                    <div class="task task-selected" id="1">Inhale for 3 sec</div>
-                    <div class="task" id="2">Hold for 1 sec</div>
-                    <div class="task" id="3">Exhale in 2 sec</div>
-                    <div class="task" id="4">Inhale for 4 sec</div>
+                    <div class="task task-selected" id="1">Inhale for 3 sec <br /> (Normal Breathing) </div>
+                    <div class="task" id="2">Hold for 2 sec </div>
+                    <div class="task" id="3">Exhale for 2 sec <br /> (Normal Breathing)</div>
+                    <div class="task" id="4">Inhale for 4 sec <br /> (Normal Breathing)</div>
                     <div class="task" id="5">Hold for 2 sec</div>
-                    <div class="task" id="6">Exhale in 3 sec</div>
-                    <div class="task" id="7">Inhale for 3 sec</div>
+                    <div class="task" id="6">Exhale for 3 sec <br /> (Normal Breathing)</div>
+                    <div class="task" id="7">Inhale for 3 sec<br /> (Through Right nose)</div>
                     <div class="task" id="8">Hold for 2 sec</div>
-                    <div class="task" id="9">Exhale in 4 sec</div>
-                    <div class="task" id="10">Hold for 2 sec</div>
-                    <div class="task" id="11">Exhale in 3 sec</div>
-                    <div class="task" id="12">Inhale for 3 sec</div>
+                    <div class="task" id="9">Exhale for 4 sec<br />(Through left nose)</div>
+                    <div class="task" id="10">Inhale for 5 sec<br />(Through left nose)</div>
+                    <div class="task" id="11">Hold for 3 sec</div>
+                    <div class="task" id="12">Exhale for 2 sec<br />(Through Right nose)</div>
                     <div id="13"></div>
 
                 </div>
@@ -152,25 +152,28 @@
             <div class="main-page-right">
                 <div class="main-level-box">
                     <div class="level-sub-scores">SCORES</div>
-                    <h1 class="level-score" id="score">000</h1>
+                    <h1 class="level-score" id="scoreBox">000</h1>
                 </div>
-                <div class="benefits-box">
-                    <h2 class="heading-steps">Benefits</h2>
-                    <div class="task">Reduce Stress</div>
-                    <div class="task">Reduce Anxiety</div>
-                    <div class="task">Improved Concentration</div>
-                    <div class="task">Improved Cognition</div>
-                    <h2 class="heading-steps">Relaxing Quotes</h2>
-                    <p class="quote-text" id="quote"><i>"There is more to life than increasing its speed."
-                        </i><br /><b>Mahatma
-                            Gandhi</b></p>
+                <div class="last-box">
+                    <div class="benefit-box">
+                        <h2 class="heading-benefits">Benefits</h2>
+                        <div class="task">Reduce Stress</div>
+                        <div class="task">Reduce Anxiety</div>
+                        <div class="task">Improved Concentration</div>
+                        <div class="task">Improved Cognition</div>
+                    </div>
+                    <div class="relax-box">
+                        <p class="quote-text" id="quote"><i>"There is more to life than increasing its speed."
+                            </i><br /><b>Mahatma
+                                Gandhi</b></p>
+                    </div>
                 </div>
             </div>
+            <form id="postScore" name="postScore" method="post">
+                {% csrf_token %}
+                {{form}}
+            </form>
         </div>
-        <form id="postScore" name="postScore" method="post">
-            {% csrf_token %}
-            <div>{{form}}</div>
-        </form>
     </div>
     <script src="{% static '/js/music.js' %}"></script>
     <script src="{% static '/js/quote.js' %}"></script>

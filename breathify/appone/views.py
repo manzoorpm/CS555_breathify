@@ -71,18 +71,92 @@ def levelone(request):
 
 @login_required(login_url='signin') #redirect to login if not 
 def leveltwo(request):
-	context = {}
-	return render(request, 'appone/leveltwo.html')
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	context = {'form': form}
+	return render(request, 'appone/leveltwo.html', context)
 
 @login_required(login_url='signin') #redirect to login if not 
 def levelthree(request):
-	context = {}
-	return render(request, 'appone/levelthree.html')
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	context = {'form': form}
+	return render(request, 'appone/levelthree.html', context)
 
 @login_required(login_url='signin') #redirect to login if not 
 def levelfour(request):
-	context = {}
-	return render(request, 'appone/levelfour.html')
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	context = {'form': form}
+	return render(request, 'appone/levelfour.html', context)
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelfive(request):
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	context = {'form': form}
+	return render(request, 'appone/levelfive.html', context)
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelsix(request):
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('home')
+	context = {'form': form}
+	return render(request, 'appone/levelsix.html', context)
+
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelangry(request):
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('relief')
+	context = {'form': form}
+	return render(request, 'appone/levelangry.html', context)
+
+@login_required(login_url='signin') #redirect to login if not 
+def leveldepressed(request):
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('relief')
+	context = {'form': form}
+	return render(request, 'appone/leveldepressed.html', context)
+
+@login_required(login_url='signin') #redirect to login if not 
+def levelstressed(request):
+	form = scoreForm()
+	if request.method == 'POST':
+		form = scoreForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('relief')
+	context = {'form': form}
+	return render(request, 'appone/levelstressed.html', context)
 
 @login_required(login_url='signin') #redirect to login if not 
 def profile(request):

@@ -60,7 +60,7 @@
                     </div>
                     <div class="list-head-box">
                         <div class="no-box">
-                            <div class="list-head-text">No.</div>
+                            <div class="list-head-text">Date</div>
                         </div>
                         <div class="activity-name-box">
                             <div class="list-head-text">Activity Name</div>
@@ -72,7 +72,7 @@
                     {% for activity in activitys %}
                     <div class="div-block-26">
                         <div class="no-box">
-                            <div class="no-text">1.</div>
+                            <div class="no-text">{{activity.date}}</div>
                         </div>
                         <div class="activity-name-box">
                             <div class="actvity-name-text">{{activity.game_level}}</div>

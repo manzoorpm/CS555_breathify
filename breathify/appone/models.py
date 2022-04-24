@@ -1,5 +1,11 @@
+from datetime import date
+from email.policy import default
+import imp
+from pyexpat import model
+from time import timezone
 from django.db import models
 from django.conf import settings
+from django.utils import timezone
 
 
 # Create your models here.
@@ -24,3 +30,4 @@ class activity(models.Model):
 	user = models.CharField(max_length=200, null=True)
 	game_level = models.CharField(max_length=200, null=True)
 	activity_points = models.CharField(max_length=200, null=True)
+	date = models.DateField(default=timezone.now)

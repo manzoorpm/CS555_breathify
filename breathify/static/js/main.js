@@ -1,7 +1,7 @@
 function start() {
     var val = document.getElementById('level').getAttribute('data-value');
     userID = document.getElementById('userID').innerHTML;
-    console.log(userID);
+    console.log(val);
 
     let inhaleTimings;
     let holdTimings;
@@ -14,16 +14,89 @@ function start() {
 
     if (val == 1) { //level One Timings
         inhaleTimings = [3000, 4000, 3000, 5000];
-        holdTimings = [1000, 2000, 2000, 3000];
+        holdTimings = [2000, 2000, 2000, 3000];
         exhaleTimings = [2000, 3000, 4000, 2000];
-        allTimings = [3000, 1000, 2000, 4000, 2000, 3000, 3000, 2000, 4000, 5000, 3000, 2000];
-        totalTimings = [5000, 9000, 9000, 10000];
+        allTimings = [3000, 2000, 2000, 4000, 2000, 3000, 3000, 2000, 4000, 5000, 3000, 2000];
+        totalTimings = [7000, 9000, 9000, 10000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 2) { //level two Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 3) { //level three Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 4) { //level four Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 5) { //level five Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 6) { //level six Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 7) { //level depressed Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 8) { //level angry Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
+        lenAll = allTimings.length;
+        lenTot = totalTimings.length;
+    }
+    else if (val == 9) { //level stressed Timings
+        inhaleTimings = [4000, 5000, 5000, 5000];
+        holdTimings = [3000, 3000, 4000, 3000];
+        exhaleTimings = [2000, 2000, 5000, 5000];
+        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
+        totalTimings = [9000, 10000, 14000, 13000];
         lenAll = allTimings.length;
         lenTot = totalTimings.length;
     }
 
     let score = 0;
-    var elem = document.getElementById("score");
+    var elem1 = document.getElementById("score");
+    var elem2 = document.getElementById("scoreBox");
     var steps;
 
     function inhale(x) {
@@ -61,7 +134,8 @@ function start() {
     function myLoop() {
         score = score + 100;
         setTimeout(function () {
-            elem.innerHTML = score;
+            elem1.innerHTML = score;
+            elem2.innerHTML = score;
             j++;
             if (j < lenTot) {
                 myLoop();

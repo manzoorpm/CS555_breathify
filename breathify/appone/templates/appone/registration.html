@@ -6,18 +6,17 @@
   <meta charset="utf-8">
   <title>Breathify - Log in</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
   <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
   <script src="{% static '/js/main.js' %}"></script>
-
 </head>
 
 <body>
   <div class="section wf-section">
     <div class="login-box">
-      <div class="form-block-login w-form"><img src="{% static '/images/logo.png' %}" loading="lazy" width="222"
-          sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt="" class="logo-login">
+      <div class="form-block-login w-form"><img src="{% static '/images/logo.png' %}" style="margin-bottom: 30px;"
+          loading="lazy" width="222" sizes="(max-width: 479px) 122px, (max-width: 767px) 25vw, 22vw" alt=""
+          class="logo-login">
         <form id="email-form" name="email-form" method="post" action="" class="form-2">
           {% csrf_token %}
           <div>{{form.username}}</div>

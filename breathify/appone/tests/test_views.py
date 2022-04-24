@@ -15,6 +15,12 @@ class TestViews(TestCase):
         self.leveltwo_url = reverse('leveltwo')
         self.levelthree_url = reverse('levelthree')
         self.levelfour_url = reverse('levelfour')
+        self.levelfive_url = reverse('levelfive')
+        self.levelsix_url = reverse('levelsix')
+        self.levelangry_url = reverse('levelangry')
+        self.leveldepressed_url = reverse('leveldepressed')
+        self.levelstressed_url = reverse('levelstressed')
+        self.levelrelief_url = reverse('relief')
         self.profile_url = reverse('profile')
 
     def test_sign_in_GET(self):
@@ -51,7 +57,37 @@ class TestViews(TestCase):
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.levelfour_url)
         self.assertEqual(response.status_code, 200)
+    
+    def test_levelfive_GET(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get(self.levelfive_url)
+        self.assertEqual(response.status_code, 200)
+    
+    def test_levelsix_GET(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get(self.levelsix_url)
+        self.assertEqual(response.status_code, 200)
 
+    def test_levelangry_GET(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get(self.levelangry_url)
+        self.assertEqual(response.status_code, 200)
+    
+    def test_leveldepressed_GET(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get(self.leveldepressed_url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_levelstressed_GET(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get(self.levelstressed_url)
+        self.assertEqual(response.status_code, 200)
+    
+    def test_levelrelief_GET(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get(self.levelrelief_url)
+        self.assertEqual(response.status_code, 200)
+    
     def test_profile_GET(self):
         self.client.login(username='john', password='johnpassword')
         response = self.client.get(self.profile_url)

@@ -50,3 +50,45 @@ class Test_levelfour_url(SimpleTestCase):
     def test_levelfour_url_is_resolved(self):
         url = reverse('levelfour')
         self.assertEqual(resolve(url).func, levelfour)
+
+class Test_levelfive_url(SimpleTestCase):
+
+    def test_levelfour_url_is_resolved(self):
+        url = reverse('levelfive')
+        self.assertEqual(resolve(url).func, levelfive)
+
+class Test_levelsix_url(SimpleTestCase):
+
+    def test_levelfour_url_is_resolved(self):
+        url = reverse('levelsix')
+        self.assertEqual(resolve(url).func, levelsix)
+
+class Test_levelangry_url(SimpleTestCase):
+
+    def test_levelangry_url_is_resolved(self):
+        url = reverse('levelangry')
+        self.assertEqual(resolve(url).func, levelangry)
+
+class Test_levelsix_url(SimpleTestCase):
+
+    def test_leveldepressed_url_is_resolved(self):
+        url = reverse('leveldepressed')
+        self.assertEqual(resolve(url).func, leveldepressed)
+
+class Test_levelsix_url(SimpleTestCase):
+
+    def test_levelstressed_url_is_resolved(self):
+        url = reverse('levelstressed')
+        self.assertEqual(resolve(url).func, levelstressed)
+
+class Test_levelsix_url(SimpleTestCase):
+
+    def test_profile_url_is_resolved(self):
+        url = reverse('profile')
+        self.assertEqual(resolve(url).func, profile)
+
+class Test_levelsix_url(SimpleTestCase):
+
+    def test_relief_url_is_resolved(self):
+        url = reverse('relief')
+        self.assertEqual(resolve(url).func, relief)
