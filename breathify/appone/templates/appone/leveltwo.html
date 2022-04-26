@@ -130,7 +130,7 @@
                 </div>
                 <div class="start-stop">
                     <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
-                    <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+                    <div> <button class="StopButton" id="stop" onclick="window.location.reload();">Stop</button></div>
                 </div>
                 <div class="music-box" id="music-box">
                     <audio src="{% static 'music/music2.mp3' %}" id="audio"></audio>
@@ -157,8 +157,7 @@
                 <div class="last-box">
                     <div class="benefit-box" style="background-color: rgba(103, 129, 177, 0.67);">
                         <h2 class="heading-benefits" style="background-color: rgba(42, 77, 142, 0.67);">Benefits</h2>
-                        <div class="task">Reduce Stress</div>
-                        <div class="task">Reduce Anxiety</div>
+                        <div class="task">Improved Sleep</div>
                         <div class="task">Improved Concentration</div>
                         <div class="task">Improved Cognition</div>
                     </div>

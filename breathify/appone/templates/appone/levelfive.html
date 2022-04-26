@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Blue Mountains - Level 2</title>
+    <title>Night Brreze - Level 5</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
     <script src="{% static '/js/main.js' %}"></script>
@@ -13,7 +13,8 @@
 </head>
 
 <body>
-    <div class="section-home wf-section" style="background-image: url('/static/images/2774583.jpg'); ">
+    <div class="section-home wf-section"
+        style="background-image: url('/static/images/2112.w026.n002.1274B.p1.1274.jpg'); ">
         <div class="score-box" id="score-box">
             <div>Congrats! you have scored <span id="score">000</span> points</div>
             <div><button id="levels" class="more-levels-button" onclick="saveScore()">More Levels</button></div>
@@ -22,8 +23,8 @@
         <div class="container-mainpage">
             <div class="main-page-left">
                 <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
-                    <h1 class="level-head" id="level" data-value="2">Level 2</h1>
-                    <div class="level-sub-head-1" id="levelName">Blue Mountains</div>
+                    <h1 class="level-head" id="level" data-value="2">Level 5</h1>
+                    <div class="level-sub-head-1" id="levelName">Night Breeze</div>
                 </div>
                 <div class="steps-box" style="background-color: rgba(103, 129, 177, 0.67);">
                     <div class="steps-head-box">
@@ -130,7 +131,7 @@
                 </div>
                 <div class="start-stop">
                     <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
-                    <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+                    <div> <button class="StopButton" id="stop" onclick="window.location.reload();">Stop</button></div>
                 </div>
                 <div class="music-box" id="music-box">
                     <audio src="{% static 'music/music2.mp3' %}" id="audio"></audio>

@@ -6,8 +6,8 @@ function start() {
     let inhaleTimings;
     let holdTimings;
     let exhaleTimings;
-    let allTimings;
-    let totalTimings;
+    let allTimings = 0;
+    let totalTimings = 0;
     let flag = 0;
     let levelName;
     let finalScore;
@@ -58,11 +58,11 @@ function start() {
         lenTot = totalTimings.length;
     }
     else if (val == 6) { //level six Timings
-        inhaleTimings = [4000, 5000, 5000, 5000];
-        holdTimings = [3000, 3000, 4000, 3000];
-        exhaleTimings = [2000, 2000, 5000, 5000];
-        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
-        totalTimings = [9000, 10000, 14000, 13000];
+        inhaleTimings = [2000, 3000, 4000, 5000, 6000, 7000];
+        holdTimings = [1000, 2000, 3000, 4000, 5000, 6000];
+        exhaleTimings = [2000, 3000, 4000, 5000, 6000, 7000];
+        allTimings = [2000, 1000, 2000, 3000, 2000, 3000, 4000, 3000, 4000, 5000, 4000, 5000, 6000, 5000, 6000, 7000, 6000, 7000];
+        totalTimings = [5000, 7000, 11000, 14000, 17000, 20000];
         lenAll = allTimings.length;
         lenTot = totalTimings.length;
     }
@@ -76,11 +76,11 @@ function start() {
         lenTot = totalTimings.length;
     }
     else if (val == 8) { //level angry Timings
-        inhaleTimings = [4000, 5000, 5000, 5000];
-        holdTimings = [3000, 3000, 4000, 3000];
-        exhaleTimings = [2000, 2000, 5000, 5000];
-        allTimings = [4000, 3000, 2000, 5000, 3000, 2000, 5000, 4000, 5000, 5000, 3000, 5000];
-        totalTimings = [9000, 10000, 14000, 13000];
+        inhaleTimings = [5000, 4000, 6000, 3000, 2000];
+        holdTimings = [6000, 3000, 4000, 3000, 3000];
+        exhaleTimings = [5000, 4000, 6000, 2000, 2000];
+        allTimings = [5000, 6000, 5000, 4000, 3000, 4000, 6000, 4000, 6000, 3000, 3000, 2000, 2000, 3000, 2000];
+        totalTimings = [16000, 11000, 16000, 8000, 7000];
         lenAll = allTimings.length;
         lenTot = totalTimings.length;
     }
@@ -132,18 +132,18 @@ function start() {
     var j = 0;
 
     function myLoop() {
-        score = score + 100;
+        score = score + (allTimings[j] / 100);
         setTimeout(function () {
             elem1.innerHTML = score;
             elem2.innerHTML = score;
             j++;
-            if (j < lenTot) {
+            if (j < lenAll) {
                 myLoop();
             }
             else {
                 displayScore();
             }
-        }, totalTimings[j])
+        }, allTimings[j])
     }
 
     myLoop();
@@ -171,10 +171,6 @@ function start() {
         scoreBox.style.display = "flex"
     }
 
-}
-
-function stop() {
-    return;
 }
 
 function saveScore() {

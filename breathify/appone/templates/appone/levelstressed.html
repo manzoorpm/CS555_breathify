@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Blue Mountains - Level 2</title>
+    <title>Mystic River - Level 3</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static '/css/cssFramework.css' %}">
     <script src="{% static '/js/main.js' %}"></script>
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="section-home wf-section" style="background-image: url('/static/images/2774583.jpg'); ">
+    <div class="section-home wf-section" style="background-image: url('/static/images/2814684.jpg'); ">
         <div class="score-box" id="score-box">
             <div>Congrats! you have scored <span id="score">000</span> points</div>
             <div><button id="levels" class="more-levels-button" onclick="saveScore()">More Levels</button></div>
@@ -21,26 +21,26 @@
         {% include 'appone/navbar.html' %}
         <div class="container-mainpage">
             <div class="main-page-left">
-                <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
-                    <h1 class="level-head" id="level" data-value="2">Level 2</h1>
-                    <div class="level-sub-head-1" id="levelName">Blue Mountains</div>
+                <div class="main-level-box" style="background-color: rgba(25, 61, 39, 0.67);">
+                    <h1 class="level-head" id="level" data-value="7">Sudden Relief</h1>
+                    <div class="level-sub-head-1" id="levelName">I'm stressed</div>
                 </div>
-                <div class="steps-box" style="background-color: rgba(103, 129, 177, 0.67);">
+                <div class="steps-box" style="background-color: rgba(82, 155, 130, 0.67);">
                     <div class="steps-head-box">
-                        <h2 class="heading-benefits" style="background-color: rgba(42, 77, 142, 0.67);">Steps</h2>
+                        <h2 class="heading-benefits" style="background-color: rgba(49, 94, 79, 0.67);">Steps</h2>
                     </div>
                     <div class="task task-selected" id="1">Inhale for 3 sec <br /> (Normal Breathing) </div>
                     <div class="task" id="2">Hold for 4 sec </div>
                     <div class="task" id="3">Exhale for 3 sec <br /> (Normal Breathing)</div>
-                    <div class="task" id="4">Inhale for 2 sec <br /> (Normal Breathing)</div>
+                    <div class="task" id="4">Inhale for 2 sec <br /> (Through right nose)</div>
                     <div class="task" id="5">Hold for 5 sec</div>
-                    <div class="task" id="6">Exhale for 3 sec <br /> (Normal Breathing)</div>
-                    <div class="task" id="7">Inhale for 2 sec<br /> (Through Right nose)</div>
+                    <div class="task" id="6">Exhale for 3 sec <br /> (Through left nose)</div>
+                    <div class="task" id="7">Inhale for 2 sec<br /> (Through left nose)</div>
                     <div class="task" id="8">Hold for 5 sec</div>
-                    <div class="task" id="9">Exhale for 5 sec<br />(Through left nose)</div>
-                    <div class="task" id="10">Inhale for 5 sec<br />(Through left nose)</div>
+                    <div class="task" id="9">Exhale for 5 sec<br />(Through right nose)</div>
+                    <div class="task" id="10">Inhale for 5 sec<br />(Through right nose)</div>
                     <div class="task" id="11">Hold for 3 sec</div>
-                    <div class="task" id="12">Exhale for 5 sec<br />(Through Right nose)</div>
+                    <div class="task" id="12">Exhale for 5 sec<br />(Through mouth)</div>
                     <div id="13"></div>
 
                 </div>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="start-stop">
                     <div> <button class="StartButton" id="start" onclick="start()">Start</button></div>
-                    <div> <button class="StopButton" id="stop" onclick="stop()">Stop</button></div>
+                    <div> <button class="StopButton" id="stop" onclick="window.location.reload();">Stop</button></div>
                 </div>
                 <div class="music-box" id="music-box">
                     <audio src="{% static 'music/music2.mp3' %}" id="audio"></audio>
@@ -150,19 +150,19 @@
 
             </div>
             <div class="main-page-right">
-                <div class="main-level-box" style="background-color: rgba(35, 54, 83, 0.67);">
+                <div class="main-level-box" style="background-color: rgba(25, 61, 39, 0.67);">
                     <div class="level-sub-scores">SCORES</div>
                     <h1 class="level-score" id="scoreBox">000</h1>
                 </div>
                 <div class="last-box">
-                    <div class="benefit-box" style="background-color: rgba(103, 129, 177, 0.67);">
-                        <h2 class="heading-benefits" style="background-color: rgba(42, 77, 142, 0.67);">Benefits</h2>
+                    <div class="benefit-box" style="background-color: rgba(82, 155, 130, 0.67);">
+                        <h2 class="heading-benefits" style="background-color: rgba(49, 94, 79, 0.67);">Benefits</h2>
                         <div class="task">Reduce Stress</div>
                         <div class="task">Reduce Anxiety</div>
                         <div class="task">Improved Concentration</div>
                         <div class="task">Improved Cognition</div>
                     </div>
-                    <div class="relax-box" style="background-color: rgba(103, 129, 177, 0.67);">
+                    <div class="relax-box" style="background-color: rgba(82, 155, 130, 0.67);">
                         <p class="quote-text" id="quote"><i>"There is more to life than increasing its speed."
                             </i><br /><b>Mahatma
                                 Gandhi</b></p>

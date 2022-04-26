@@ -34,15 +34,21 @@
                             height="120px" alt="" class="profile-image">
                         <div class="name-box">
                             <h1 class="profile-name">{{user}}</h1>
-                            <div class="player-level">Beginner</div>
+                            {% if totalPoints >= 500 %}
+                            <div class="player-level">Intermediate</div>
+
+                            {% else %} <div class="player-level">Beginner</div>
+                            {% endif%}
                         </div>
                     </div>
                     <div class="activity-more-info-box">
                         <div class="email-box">
-                            <div class="email-text">{{email}}</div>
+                            <div class="email-text"><img src="{% static 'images/mail.png' %}" loading="lazy"
+                                    height="30px" style="margin-right: 10px;"> {{email}}</div>
                         </div>
                         <div class="dob-box">
-                            <div class="email-text">{{first}} {{last}}</div>
+                            <div class="email-text"><img src="{% static 'images/user1.png' %}" loading="lazy"
+                                    height="30px" style="margin-right: 10px;"> {{first}} {{last}}</div>
                         </div>
 
                     </div>
